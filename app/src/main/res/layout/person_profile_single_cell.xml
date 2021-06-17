@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="personProfile"
+            type="com.example.bindingdata.pojo.PersonInfoModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="8dp"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="9dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postId"
+                android:text="postId :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id"
+                android:text="id :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/postId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:text="name :"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/id"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:text="email:"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/body"
+                android:text="body:"
+                android:textSize="18sp"
+                android:textColor="#6F6F6F"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/email"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postIdinfo"
+                android:text="@{personProfile.postId+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/postId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idinfo"
+                android:text="@{personProfile.id+` `}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/id"
+                android:layout_below="@id/postIdinfo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameinfo"
+                android:text="@{personProfile.name}"
+                android:textSize="18sp"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/name"
+                android:layout_below="@id/idinfo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailinfo"
+                android:text="@{personProfile.email}"
+                android:textSize="18sp"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/email"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_below="@id/nameinfo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bodyinfo"
+                android:text="@{personProfile.body}"
+                android:textSize="18sp"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/body"
+                android:layout_marginLeft="18dp"
+                android:textColor="#3F51B5"
+                android:layout_below="@id/emailinfo"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
