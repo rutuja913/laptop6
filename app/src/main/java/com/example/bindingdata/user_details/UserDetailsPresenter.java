@@ -31,6 +31,7 @@ private UserDetailsService userDetailsService;
             @Override
             public void onFailure(Call<CustomerExtraInfoModel> call, Throwable t) {
             view.showToast("something went wrong");
+
             }
         });
        // Call<CustomerExtraInfoModel> call =userDetailsService.getCustomerData(1).e;

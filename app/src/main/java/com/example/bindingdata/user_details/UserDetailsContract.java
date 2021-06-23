@@ -9,6 +9,7 @@ public interface UserDetailsContract {
     {
         void showUserList(ArrayList<CustomerInfoModel> userList);
         void showToast(String message);
+        public void onGetListBtnClicked();
     }
     interface UserDetailsBackend{
         void getUserList(long pageNumber);

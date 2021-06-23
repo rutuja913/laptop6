@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
-    android:layout_width="match_parent" android:layout_height="match_parent">
+     <data>
+         <variable
+             name="callBack"
+             type="com.example.bindingdata.user_details.UserDetailsActivity" />
+     </data>
 
-
-    <TextView
-        android:id="@+id/heading"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/app_bar_layout"
+            android:id="@+id/appBar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            android:layout_margin="2dp"
+            android:layout_above="@id/getUserListBtn"
+            android:background="#ff0101"
+            />
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#100F0F"
-        android:padding="10dp"
-        android:text="list of students"
+        android:id="@+id/getUserListBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="@{() -> callBack.onGetListBtnClicked()}"
 
+/>
+    </RelativeLayout>
 
-
-
-        android:textColor="#065A09"
-        android:textSize="24sp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:gravity="center_horizontal" />
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/heading"
-        android:layout_margin="2dp"
-        android:id="@+id/listRV">
-
-
-
-    </androidx.recyclerview.widget.RecyclerView>
-</RelativeLayout>
 </layout>

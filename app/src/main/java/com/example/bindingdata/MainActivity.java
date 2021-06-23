@@ -14,19 +14,23 @@ import com.example.bindingdata.recycler_view_example.RecyclerViewExample;
 import com.example.bindingdata.user_details.UserDetailsActivity;
 
 public class MainActivity extends AppCompatActivity {
-private ActivityMainBinding activityMainBinding;
+    private ActivityMainBinding activityMainBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_main);
-        activityMainBinding=DataBindingUtil.setContentView(this,R.layout.activity_main);
-      // StudentModel studentModel=new StudentModel("rutuja soni","12"
-      // ,"22","sonirutuja28@gmail.com");
-       // activityMainBinding.studentName.setText(studentModel.getStudentName());
-//activityMainBinding.setStudentInfo(studentModel);
-       activityMainBinding.btn1.setOnClickListener(v -> {
-    //Intent intent=new Intent;
-       startActivity(new Intent(MainActivity.this, UserDetailsActivity.class));
-       });
+        // setContentView(R.layout.activity_main);
+        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        activityMainBinding.setCallBack(this);
+
+    }
+    /*    intiate();
+    }
+    public void intiate()
+    {
+        startActivity(new Intent(MainActivity.this, UserDetailsActivity.class));
+    }*/
+    public void onGoToStudentsClicked() {
+        startActivity(new Intent(MainActivity.this, UserDetailsActivity.class));
     }
 }
