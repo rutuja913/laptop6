@@ -78,7 +78,7 @@ public class GetUserDataFromRestAPI {
                 "        \"text\": \"To keep ReqRes free, contributions towards server costs are appreciated!\"\n" +
                 "    }\n" +
                 "}";
-        customerExtraInfoModel=new CustomerExtraInfoModel();
+        //customerExtraInfoModel=new CustomerExtraInfoModel();
         Call<CustomerExtraInfoModel> call =recyclerDataInterface.getCustomerData(1);
         call.enqueue(new Callback<CustomerExtraInfoModel>() {
             @Override

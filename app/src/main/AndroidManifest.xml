@@ -24,7 +24,8 @@
         </activity>
         <activity android:name=".user_details.UserDetailsActivity"
             />
-
+<activity android:name=".TimePickerExample"/>
+<activity android:name=".DatePickerExample"/>
 
     </application>
 

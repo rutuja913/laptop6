@@ -68,6 +68,24 @@
             android:id="@+id/btn1"
             android:onClick="@{() -> callBack.onGoToStudentsClicked()}"
             />
+       <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="go to time picker"
+        android:textAllCaps="true"
+        android:id="@+id/btn2"
+        android:onClick="@{() -> callBack.onGoToTimePicker()}"
+        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:text="go to date picker"
+            android:textAllCaps="true"
+            android:id="@+id/btn3"
+            android:onClick="@{() -> callBack.onGoToDatePicker()}"
+            />
     </LinearLayout>
 
 </layout>

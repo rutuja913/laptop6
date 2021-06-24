@@ -33,4 +33,10 @@ public class MainActivity extends AppCompatActivity {
     public void onGoToStudentsClicked() {
         startActivity(new Intent(MainActivity.this, UserDetailsActivity.class));
     }
+    public void onGoToTimePicker() {
+        startActivity(new Intent(MainActivity.this, TimePickerExample.class));
+    }
+    public void onGoToDatePicker() {
+        startActivity(new Intent(MainActivity.this, DatePickerExample.class));
+    }
 }

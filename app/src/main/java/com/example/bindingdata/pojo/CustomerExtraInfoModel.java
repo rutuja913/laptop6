@@ -19,25 +19,6 @@ public class CustomerExtraInfoModel implements Serializable {
     @SerializedName("total_pages")
     @Expose
     private long totalPages;
-    @SerializedName("data")
-    @Expose
-    private ArrayList<CustomerInfoModel> data = null;
-    @SerializedName("support")
-    @Expose
-    private Support support;
-
-    public CustomerExtraInfoModel(long page, long perPage, long total, long totalPages, ArrayList<CustomerInfoModel> data, Support support) {
-        this.page = page;
-        this.perPage = perPage;
-        this.total = total;
-        this.totalPages = totalPages;
-        this.data = data;
-        this.support = support;
-    }
-
-    public CustomerExtraInfoModel() {
-
-    }
 
     public long getPage() {
         return page;
@@ -79,11 +60,15 @@ public class CustomerExtraInfoModel implements Serializable {
         this.data = data;
     }
 
-    public Support getSupport() {
-        return support;
-    }
+    @SerializedName("data")
+    @Expose
+    private ArrayList<CustomerInfoModel> data ;
 
-    public void setSupport(Support support) {
-        this.support = support;
+    public CustomerExtraInfoModel(long page, long perPage, long total, long totalPages, ArrayList<CustomerInfoModel> data) {
+        this.page = page;
+        this.perPage = perPage;
+        this.total = total;
+        this.totalPages = totalPages;
+        this.data = data;
     }
 }
